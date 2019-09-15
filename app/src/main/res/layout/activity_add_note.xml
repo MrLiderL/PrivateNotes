@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/safeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/safe_button" />
+
+    <EditText
+        android:id="@+id/titleNote"
+        android:hint="@string/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/tvNoteDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:background="#EEEEEE"
+        android:textColor="#212121"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/textNote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:paddingLeft="10dp"
+        android:background="@null"/>
+
+</LinearLayout>
