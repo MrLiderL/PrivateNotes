@@ -4,7 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.widget.Toast
+import com.kirpoltoradnev.privatenotes.MainActivity
 import java.lang.Exception
 
 class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?)
@@ -31,7 +31,7 @@ class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?)
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {}
 
-    fun createNote(mCtx: Context, editedNote: Note){
+    fun createNote(editedNote: Note){
         val values = ContentValues()
         values.put(COLUMN_TITLE, editedNote.title)
         values.put(COLUMN_NOTE, editedNote.noteText)
@@ -42,7 +42,7 @@ class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?)
         db.close()
     }
 
-    fun saveNote(mCtx: Context, editedNote: Note){
+    fun saveNote(editedNote: Note){
         val values = ContentValues()
         values.put(COLUMN_TITLE, editedNote.title)
         values.put(COLUMN_NOTE, editedNote.noteText)
@@ -52,15 +52,15 @@ class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?)
     }
 
 
-    fun getNotes(mCtx: Context): ArrayList<Note> {
+    fun getNotes(): ArrayList<Note> {
         val query = "SELECT * FROM $TABLE_NAME"
         val db = this.writableDatabase
         val cursor = db.rawQuery(query, null)
         val notes = ArrayList<Note>()
 
-        if (cursor.count == 0)
-            Toast.makeText(mCtx, "No Records Found", Toast.LENGTH_SHORT).show()
-        else {
+        if (cursor.count == 0) {
+            // TODO Toast.makeText(this@MainActivity, "No Records Found", Toast.LENGTH_SHORT).show()
+        } else {
             while (cursor.moveToNext()) {
                 val noteId = cursor.getInt(cursor.getColumnIndex(COLUMN_ID))
                 val noteTitle = cursor.getString(cursor.getColumnIndex(COLUMN_TITLE))
@@ -68,7 +68,7 @@ class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?)
                 val note = Note(noteId, noteTitle, noteText)
                 notes.add(note)
             }
-            Toast.makeText(mCtx, "${cursor.count.toString()} Records Found", Toast.LENGTH_SHORT).show()
+            // TODO Toast.makeText(contextD, "${cursor.count.toString()} Records Found", Toast.LENGTH_SHORT).show()
         }
 
         cursor.close()

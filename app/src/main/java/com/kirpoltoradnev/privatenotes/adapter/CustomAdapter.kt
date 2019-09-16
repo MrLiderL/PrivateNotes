@@ -10,27 +10,34 @@ import com.kirpoltoradnev.privatenotes.db.Note
 
 import kotlinx.android.synthetic.main.layout_note.view.*
 
-class CustomAdapter(mCtx: Context, val notesList: ArrayList<Note>): RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+class CustomAdapter(): RecyclerView.Adapter<CustomAdapter.NoteViewHolder>() {
 
-    val mCtx = mCtx
+    var notesList: List<Note> = listOf()
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
+        val convertView = inflater.inflate(R.layout.layout_note, parent, false)
+        return NoteViewHolder(convertView)
+    }
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    override fun getItemCount(): Int = notesList.size
+
+    override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
+        holder.bind(notesList[position])
+    }
+
+    fun updateData(data: List<Note>){
+        notesList = data
+        notifyDataSetChanged()
+    }
+
+    inner class NoteViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val noteViewTitle = itemView.noteViewTitle
         val noteViewText = itemView.noteViewText
-    }
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.layout_note, parent, false)
-        return ViewHolder(v)
-    }
-
-    override fun getItemCount() = notesList.size
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val note: Note = notesList[position]
-        holder.noteViewTitle?.text = note.title
-        holder.noteViewText?.text = note.noteText
+        fun bind(item: Note) {
+            noteViewTitle.text = item.title
+            noteViewText.text = item.noteText
+        }
     }
 }

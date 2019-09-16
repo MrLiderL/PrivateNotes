@@ -21,4 +21,5 @@ class Note {
         this.title = titleNew
         this.noteText = noteNew
     }
+
 }

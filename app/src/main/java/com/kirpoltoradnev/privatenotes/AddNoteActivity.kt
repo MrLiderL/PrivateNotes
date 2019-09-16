@@ -21,7 +21,7 @@ class AddNoteActivity : AppCompatActivity() {
         existedNote = Note("No title", "")
         dbHandelr = DBOpenHelper(this, null)
 
-        dbHandelr.createNote(this, existedNote)
+        dbHandelr.createNote(existedNote)
 
         safeButton.setOnClickListener {
             safeNoteActivity(existedNote, dbHandelr, titleNote.text.toString(), textNote.text.toString())
@@ -32,7 +32,7 @@ class AddNoteActivity : AppCompatActivity() {
 
     private fun safeNoteActivity(existedNoteText: Note, db: DBOpenHelper, titleNew: String, textNew: String){
         existedNoteText.updateNote(titleNew, textNew)
-        db.saveNote(this, existedNoteText)
+        db.saveNote(existedNoteText)
     }
 
 }
