@@ -22,19 +22,22 @@ class CustomAdapter(): RecyclerView.Adapter<CustomAdapter.NoteViewHolder>() {
 
     override fun getItemCount(): Int = notesList.size
 
+    // Заполнение формы данными из noteList
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         holder.bind(notesList[position])
     }
 
+    // Обновление массива элементов <Note> из базы данных
     fun updateData(data: List<Note>){
         notesList = data
         notifyDataSetChanged()
     }
 
     inner class NoteViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val noteViewTitle = itemView.noteViewTitle
-        val noteViewText = itemView.noteViewText
+        private val noteViewTitle = itemView.noteViewTitle
+        private val noteViewText = itemView.noteViewText
 
+        // Заполнение формы View
         fun bind(item: Note) {
             noteViewTitle.text = item.title
             noteViewText.text = item.noteText

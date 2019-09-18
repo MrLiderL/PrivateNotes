@@ -16,6 +16,7 @@ class Note {
         this.noteText = noteGiven
     }
 
+    // Обновление полей элемента <Note>
     fun updateNote(titleNew: String?, noteNew: String?){
         this.id = id
         this.title = titleNew

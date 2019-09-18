@@ -1,0 +1,4 @@
+#Wed Sep 18 23:04:22 YEKT 2019
+base.0=/home/kir/Documents/AndroidStudio/PrivateNotes/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

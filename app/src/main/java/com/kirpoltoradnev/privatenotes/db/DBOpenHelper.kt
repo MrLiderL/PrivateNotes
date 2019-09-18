@@ -4,14 +4,12 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 import com.kirpoltoradnev.privatenotes.MainActivity
 import java.lang.Exception
 
-class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?)
-    : SQLiteOpenHelper(context,
-    DATABASE_NAME, factory,
-    DATABASE_VERSION
-) {
+class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
+    SQLiteOpenHelper(context, DATABASE_NAME, factory, DATABASE_VERSION) {
 
     companion object {
         private val DATABASE_VERSION = 1
@@ -22,15 +20,17 @@ class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?)
         val COLUMN_NOTE = "note"
     }
 
+    // Вызывается только при первом запуске приложения
     override fun onCreate(db: SQLiteDatabase?) {
         val CREATE_NOTE_TABLE = ("CREATE TABLE $TABLE_NAME " +
                 "($COLUMN_ID INTEGER PRIMARY KEY, " +
                 "$COLUMN_TITLE TEXT, $COLUMN_NOTE TEXT)")
-        if (db != null) db.execSQL(CREATE_NOTE_TABLE)
+        db?.execSQL(CREATE_NOTE_TABLE)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {}
 
+    // Создание заметки в базе данных. Парсинг полей элемента <Note>
     fun createNote(editedNote: Note){
         val values = ContentValues()
         values.put(COLUMN_TITLE, editedNote.title)
@@ -38,10 +38,14 @@ class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?)
         val db = this.writableDatabase
         try {
             db.insert(TABLE_NAME, null, values)
-        } catch (e:Exception){}
+        } catch (e:Exception){
+            Log.d("AppProcess", "Exception while creating note: INSERT in db ")
+        }
         db.close()
     }
 
+
+    // Обновление заметки в базе данных
     fun saveNote(editedNote: Note){
         val values = ContentValues()
         values.put(COLUMN_TITLE, editedNote.title)
@@ -52,6 +56,7 @@ class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?)
     }
 
 
+    // Берем все заметки из базы данных и выводим в виде масива элементов <Note>
     fun getNotes(): ArrayList<Note> {
         val query = "SELECT * FROM $TABLE_NAME"
         val db = this.writableDatabase
@@ -70,10 +75,9 @@ class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?)
             }
             // TODO Toast.makeText(contextD, "${cursor.count.toString()} Records Found", Toast.LENGTH_SHORT).show()
         }
-
         cursor.close()
         db.close()
-
         return notes
     }
+
 }
