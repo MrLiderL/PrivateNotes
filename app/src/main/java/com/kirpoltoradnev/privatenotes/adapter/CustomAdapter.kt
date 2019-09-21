@@ -1,6 +1,5 @@
 package com.kirpoltoradnev.privatenotes.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,7 @@ import com.kirpoltoradnev.privatenotes.db.Note
 
 import kotlinx.android.synthetic.main.layout_note.view.*
 
-class CustomAdapter(): RecyclerView.Adapter<CustomAdapter.NoteViewHolder>() {
+class CustomAdapter(val listener: (Note) -> Unit): RecyclerView.Adapter<CustomAdapter.NoteViewHolder>() {
 
     var notesList: List<Note> = listOf()
 
@@ -24,7 +23,7 @@ class CustomAdapter(): RecyclerView.Adapter<CustomAdapter.NoteViewHolder>() {
 
     // Заполнение формы данными из noteList
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
-        holder.bind(notesList[position])
+        holder.bind(notesList[position], listener)
     }
 
     // Обновление массива элементов <Note> из базы данных
@@ -38,9 +37,13 @@ class CustomAdapter(): RecyclerView.Adapter<CustomAdapter.NoteViewHolder>() {
         private val noteViewText = itemView.noteViewText
 
         // Заполнение формы View
-        fun bind(item: Note) {
+        fun bind(item: Note, listener: (Note) -> Unit) {
             noteViewTitle.text = item.title
             noteViewText.text = item.noteText
+
+            itemView.setOnClickListener {
+                listener.invoke(item)
+            }
         }
     }
 }

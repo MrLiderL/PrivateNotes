@@ -2,10 +2,10 @@ package com.kirpoltoradnev.privatenotes.db
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
-import com.kirpoltoradnev.privatenotes.MainActivity
 import java.lang.Exception
 
 class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
@@ -44,6 +44,18 @@ class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         db.close()
     }
 
+    // Заполняет AddNoteActivity, если была вызвана существующая заметка
+    fun takeNote(id: Int): Note{
+        val db = this.writableDatabase
+        val query = "SELECT * FROM $TABLE_NAME WHERE $COLUMN_ID=$id"
+        val cursor = db.rawQuery(query, null)
+        cursor.moveToFirst()
+        val note = fillNoteFromDb(cursor)
+        cursor.close()
+        db.close()
+        return note
+    }
+
 
     // Обновление заметки в базе данных
     fun saveNote(editedNote: Note){
@@ -62,22 +74,36 @@ class DBOpenHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         val db = this.writableDatabase
         val cursor = db.rawQuery(query, null)
         val notes = ArrayList<Note>()
-
-        if (cursor.count == 0) {
-            // TODO Toast.makeText(this@MainActivity, "No Records Found", Toast.LENGTH_SHORT).show()
-        } else {
+        if (cursor.count != 0) {
             while (cursor.moveToNext()) {
-                val noteId = cursor.getInt(cursor.getColumnIndex(COLUMN_ID))
-                val noteTitle = cursor.getString(cursor.getColumnIndex(COLUMN_TITLE))
-                val noteText = cursor.getString(cursor.getColumnIndex(COLUMN_NOTE))
-                val note = Note(noteId, noteTitle, noteText)
-                notes.add(note)
+                notes.add(fillNoteFromDb(cursor))
             }
-            // TODO Toast.makeText(contextD, "${cursor.count.toString()} Records Found", Toast.LENGTH_SHORT).show()
         }
         cursor.close()
         db.close()
         return notes
     }
 
+    // Заполнение класса <Note> даными из БД
+    private fun fillNoteFromDb(cursor: Cursor): Note{
+        val noteId = cursor.getInt(cursor.getColumnIndex(COLUMN_ID))
+        val noteTitle = cursor.getString(cursor.getColumnIndex(COLUMN_TITLE))
+        val noteText = cursor.getString(cursor.getColumnIndex(COLUMN_NOTE))
+        return Note(noteId, noteTitle, noteText)
+    }
+
+    // Определение значения id для элемента <Note>
+    fun getNoteId(): Int{
+        val query = "SELECT $COLUMN_ID FROM $TABLE_NAME"
+        val db = this.writableDatabase
+        val cursor = db.rawQuery(query, null)
+        var currentId = 1
+        if (cursor.count != 0) {
+            cursor.moveToLast()
+            currentId = cursor.getInt(cursor.getColumnIndex(COLUMN_ID)) + 1
+        }
+        cursor.close()
+        db.close()
+        return currentId
+    }
 }

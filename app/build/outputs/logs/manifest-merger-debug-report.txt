@@ -5,6 +5,7 @@ INJECTED from /home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/Androi
 INJECTED from /home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:2:1-25:12
 INJECTED from /home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:2:1-25:12
 MERGED from [com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:20:1-40:12
+MERGED from [com.google.android.material:material:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/4b572913f1a424e7576b45966b745c44/material-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/a73c3974fa47bb64187237bb2a2898dc/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/09512de3cd1bb1e09be20eb16871e341/core-ktx-1.1.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/kir/.gradle/caches/transforms-2/files-2.1/c4ef5ca596413fc5b60e6754465386ae/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
@@ -14,8 +15,9 @@ MERGED from [androidx.fragment:fragment:1.1.0] /home/kir/.gradle/caches/transfor
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/dd5fc5a099aef28a67f93df4446647ae/appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/564388c32085138c359dac6cb7f3f8e1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/a2a941aa4e6ab52251306224b3bb595c/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/fa974f7789519f660b0500bf3e2ef9d2/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/d92e74c548111a4842462bb118fb0728/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/8cef4441aded13aed2a257520835e64a/transition-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/fa974f7789519f660b0500bf3e2ef9d2/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/d703d4fb91397ebd0fcc249b0286692c/loader-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/985a133b102794b102b4aa622ca1dbef/activity-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/c449c5b1e03a5ea7862cd8fd75e41472/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -27,6 +29,7 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/kir/.gr
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/8ce023457c6feb6f1685f591c421bd20/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/563be99a7f8ba6717b67ce50a8a4b6a6/core-1.1.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/6de075386d20be281a87dfa1b2d6ac45/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/27bc33bc5e89f584b9b261dfc907e0db/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/6cf048463d0f9b7a5cf2a54b73ba773b/lifecycle-process-2.1.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/fd2883ae1efd2c93b256724aa656969e/lifecycle-service-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/a09f34a7d8bb632b18d73f2937dc32e4/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
@@ -67,6 +70,8 @@ application
 ADDED from /home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:8:5-23:19
 MERGED from [com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:32:5-38:19
 MERGED from [com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:32:5-38:19
+MERGED from [com.google.android.material:material:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/4b572913f1a424e7576b45966b745c44/material-1.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/4b572913f1a424e7576b45966b745c44/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/kir/.gradle/caches/transforms-2/files-2.1/c4ef5ca596413fc5b60e6754465386ae/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/kir/.gradle/caches/transforms-2/files-2.1/c4ef5ca596413fc5b60e6754465386ae/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/62f0b6f27e4a370ca59a6a68553fcc74/lifecycle-extensions-2.1.0/AndroidManifest.xml:22:5-23:19
@@ -115,6 +120,8 @@ INJECTED from /home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/Androi
 INJECTED from /home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml
 MERGED from [com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:25:5-27:41
 MERGED from [com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:25:5-27:41
+MERGED from [com.google.android.material:material:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/4b572913f1a424e7576b45966b745c44/material-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/4b572913f1a424e7576b45966b745c44/material-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/a73c3974fa47bb64187237bb2a2898dc/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/a73c3974fa47bb64187237bb2a2898dc/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-ktx:1.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/09512de3cd1bb1e09be20eb16871e341/core-ktx-1.1.0/AndroidManifest.xml:5:5-7:41
@@ -133,10 +140,12 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/kir/.gradle/cac
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/564388c32085138c359dac6cb7f3f8e1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/a2a941aa4e6ab52251306224b3bb595c/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/a2a941aa4e6ab52251306224b3bb595c/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/fa974f7789519f660b0500bf3e2ef9d2/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/fa974f7789519f660b0500bf3e2ef9d2/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/d92e74c548111a4842462bb118fb0728/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/d92e74c548111a4842462bb118fb0728/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/8cef4441aded13aed2a257520835e64a/transition-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/8cef4441aded13aed2a257520835e64a/transition-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/fa974f7789519f660b0500bf3e2ef9d2/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/fa974f7789519f660b0500bf3e2ef9d2/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/d703d4fb91397ebd0fcc249b0286692c/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/d703d4fb91397ebd0fcc249b0286692c/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/985a133b102794b102b4aa622ca1dbef/activity-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -159,6 +168,8 @@ MERGED from [androidx.core:core:1.1.0] /home/kir/.gradle/caches/transforms-2/fil
 MERGED from [androidx.core:core:1.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/563be99a7f8ba6717b67ce50a8a4b6a6/core-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/6de075386d20be281a87dfa1b2d6ac45/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/6de075386d20be281a87dfa1b2d6ac45/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/27bc33bc5e89f584b9b261dfc907e0db/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/27bc33bc5e89f584b9b261dfc907e0db/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/6cf048463d0f9b7a5cf2a54b73ba773b/lifecycle-process-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/6cf048463d0f9b7a5cf2a54b73ba773b/lifecycle-process-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/fd2883ae1efd2c93b256724aa656969e/lifecycle-service-2.1.0/AndroidManifest.xml:20:5-44

@@ -12,7 +12,7 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int PORT_NUMBER = 0x7f0c0000;
-        public static final int app_name = 0x7f0c001c;
+        public static final int PORT_NUMBER = 0x7f0d0000;
+        public static final int app_name = 0x7f0d001c;
     }
 }
