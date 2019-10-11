@@ -4,9 +4,15 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.ActionBar
+import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.navigation.NavigationView
 import com.kirpoltoradnev.privatenotes.adapter.CustomAdapter
 import com.kirpoltoradnev.privatenotes.db.DBOpenHelper
 import com.kirpoltoradnev.privatenotes.db.Note
@@ -22,6 +28,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(toolbar)
+        setupToollbar(supportActionBar)
 
         dbHandler = DBOpenHelper(this, null)
 
@@ -59,7 +67,8 @@ class MainActivity : AppCompatActivity() {
 
     // Обработчики кликов и взаимодействие с View
     private fun setUpUtils(){
-        buttonCreateNote.setOnClickListener {
+        setUpNavigationView()
+        fab.setOnClickListener {
             intentQueryToAddNote(null)
         }
     }
@@ -72,5 +81,53 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("id", it.id.toString())
         }
         startActivity(intent)
+    }
+
+    private fun setupToollbar(setSupportActionBar: ActionBar?){
+        val actionBar = setSupportActionBar
+        actionBar!!.title = "PrivateNotes"
+        actionBar.setDisplayShowHomeEnabled(true)
+    }
+
+    private fun setUpNavigationView(){
+        nav_view.itemIconTintList = null
+        nav_view.setNavigationItemSelectedListener { menuItem ->
+            // set item as selected to persist highlight
+            menuItem.isChecked = true
+            // close drawer when item is tapped
+            drawer_layout.closeDrawers()
+            // Handle navigation view item clicks here.
+            when (menuItem.itemId) {
+
+                R.id.nav_tokenizer -> {
+                    Toast.makeText(this, "Profile", Toast.LENGTH_LONG).show()
+                }
+                R.id.nav_wallet -> {
+                    Toast.makeText(this, "Wallet", Toast.LENGTH_LONG).show()
+                }
+                R.id.nav_setting -> {
+                    Toast.makeText(this, "Setting", Toast.LENGTH_LONG).show()
+                }
+            }
+            // Add code here to update the UI based on the item selected
+            // For example, swap UI fragments here
+            true
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.user_info_menu, menu)
+
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_more_info -> {
+            drawer_layout.openDrawer(GravityCompat.START)
+            true
+        }
+
+        else ->
+            super.onOptionsItemSelected(item)
     }
 }

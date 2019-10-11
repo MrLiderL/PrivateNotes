@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content">z
 
     <TextView
         android:id="@+id/noteViewTitle"
@@ -36,23 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/spacing_small_8"
-        android:text="16.09.2019"
+        android:text="21.09.2019"
         android:textSize="@dimen/font_small_12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/noteViewText"/>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_marginStart="@dimen/spacing_small_8"
-        android:layout_marginTop="@dimen/spacing_small_8"
-        android:layout_marginEnd="@dimen/spacing_small_8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/noteDate"
-        app:srcCompat="@drawable/dotted_line" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

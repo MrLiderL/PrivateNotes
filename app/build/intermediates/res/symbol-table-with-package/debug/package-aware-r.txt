@@ -637,6 +637,7 @@ color color_gray_dark
 color color_gray_light
 color color_primary
 color color_primary_dark
+color color_white
 color design_bottom_navigation_shadow_color
 color design_default_color_primary
 color design_default_color_primary_dark
@@ -859,6 +860,7 @@ dimen disabled_alpha_material_light
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
+dimen font_large_22
 dimen font_large_24
 dimen font_normal_16
 dimen font_small_12
@@ -1054,6 +1056,8 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable dotted_line
 drawable ic_add_box_black_24dp
+drawable ic_create_white_24dp
+drawable ic_dehaze_white_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
@@ -1131,6 +1135,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_more_info
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1144,7 +1149,6 @@ id barrier
 id beginning
 id blocking
 id bottom
-id buttonCreateNote
 id buttonPanel
 id center
 id center_horizontal
@@ -1159,6 +1163,7 @@ id collapseActionView
 id container
 id content
 id contentPanel
+id content_frame
 id coordinator
 id custom
 id customPanel
@@ -1173,7 +1178,7 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
-id editText
+id drawer_layout
 id edit_query
 id end
 id enterAlways
@@ -1181,6 +1186,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1197,7 +1203,6 @@ id icon
 id icon_group
 id ifRoom
 id image
-id imageView
 id info
 id invisible
 id italic
@@ -1216,6 +1221,10 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id nav_setting
+id nav_tokenizer
+id nav_view
+id nav_wallet
 id navigation_header_container
 id never
 id none
@@ -1243,7 +1252,6 @@ id recyclerView
 id right
 id right_icon
 id right_side
-id safeButton
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1310,6 +1318,7 @@ id title
 id titleDividerNoCustom
 id titleNote
 id title_template
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -1318,7 +1327,6 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
-id tvNoteDate
 id unchecked
 id uniform
 id unlabeled
@@ -1413,8 +1421,12 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu drawer_view
+menu user_info_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap ic_settings
+mipmap ic_wallet
 string PORT_NUMBER
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -1467,7 +1479,7 @@ style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
-style AppTheme
+style AppTheme_Base
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -1839,6 +1851,7 @@ style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense
+style Toolbar
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar

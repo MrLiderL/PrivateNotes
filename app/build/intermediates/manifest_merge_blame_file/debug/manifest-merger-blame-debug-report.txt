@@ -38,8 +38,8 @@
 24        android:supportsRtl="true"
 24-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:13:9-35
 25        android:testOnly="true"
-26        android:theme="@style/AppTheme" >
-26-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:14:9-40
+26        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+26-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:14:9-65
 27        <activity android:name="com.kirpoltoradnev.privatenotes.AddNoteActivity" />
 27-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:15:9-62
 27-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:15:19-50
