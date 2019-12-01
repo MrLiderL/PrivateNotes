@@ -1,0 +1,83 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:dist="http://schemas.android.com/apk/distribution"
+4    package="com.kirpoltoradnev.privatenotes"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="17"
+9-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml
+10        android:targetSdkVersion="29" />
+10-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml
+11
+12    <dist:module dist:instant="true" />
+12-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:6:5-40
+12-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:6:18-37
+13
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:29:5-67
+14-->[com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:29:22-64
+15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+15-->[com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:30:5-76
+15-->[com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:30:22-73
+16
+17    <application
+17-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:8:5-23:19
+18        android:allowBackup="true"
+18-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:9:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/563be99a7f8ba6717b67ce50a8a4b6a6/core-1.1.0/AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:icon="@mipmap/ic_launcher"
+21-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:10:9-43
+22        android:label="@string/app_name"
+22-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:11:9-41
+23        android:roundIcon="@mipmap/ic_launcher_round"
+23-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:12:9-54
+24        android:supportsRtl="true"
+24-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:13:9-35
+25        android:testOnly="true"
+26        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+26-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:14:9-65
+27        <activity android:name="com.kirpoltoradnev.privatenotes.AddNoteActivity" />
+27-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:15:9-62
+27-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:15:19-50
+28        <activity android:name="com.kirpoltoradnev.privatenotes.MainActivity" >
+28-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:16:9-22:20
+28-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:16:19-47
+29            <intent-filter>
+29-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:17:13-21:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:18:17-69
+30-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:18:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:20:17-77
+32-->/home/kir/Documents/AndroidStudio/PrivateNotes/app/src/main/AndroidManifest.xml:20:27-74
+33            </intent-filter>
+34        </activity>
+35
+36        <provider
+36-->[com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:33:9-37:40
+37            android:name="com.amitshekhar.DebugDBInitProvider"
+37-->[com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:34:13-63
+38            android:authorities="com.kirpoltoradnev.privatenotes.DebugDBInitProvider"
+38-->[com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:35:13-71
+39            android:enabled="true"
+39-->[com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:36:13-35
+40            android:exported="false" />
+40-->[com.amitshekhar.android:debug-db:1.0.0] /home/kir/.gradle/caches/transforms-2/files-2.1/9f85808d98789efe67ac46aacf35132f/debug-db-1.0.0/AndroidManifest.xml:37:13-37
+41        <provider
+41-->[androidx.lifecycle:lifecycle-process:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/6cf048463d0f9b7a5cf2a54b73ba773b/lifecycle-process-2.1.0/AndroidManifest.xml:23:9-27:43
+42            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+42-->[androidx.lifecycle:lifecycle-process:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/6cf048463d0f9b7a5cf2a54b73ba773b/lifecycle-process-2.1.0/AndroidManifest.xml:24:13-79
+43            android:authorities="com.kirpoltoradnev.privatenotes.lifecycle-process"
+43-->[androidx.lifecycle:lifecycle-process:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/6cf048463d0f9b7a5cf2a54b73ba773b/lifecycle-process-2.1.0/AndroidManifest.xml:25:13-69
+44            android:exported="false"
+44-->[androidx.lifecycle:lifecycle-process:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/6cf048463d0f9b7a5cf2a54b73ba773b/lifecycle-process-2.1.0/AndroidManifest.xml:26:13-37
+45            android:multiprocess="true" />
+45-->[androidx.lifecycle:lifecycle-process:2.1.0] /home/kir/.gradle/caches/transforms-2/files-2.1/6cf048463d0f9b7a5cf2a54b73ba773b/lifecycle-process-2.1.0/AndroidManifest.xml:27:13-40
+46    </application>
+47
+48</manifest>

@@ -1,6 +1,5 @@
 package com.kirpoltoradnev.privatenotes.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,27 +9,41 @@ import com.kirpoltoradnev.privatenotes.db.Note
 
 import kotlinx.android.synthetic.main.layout_note.view.*
 
-class CustomAdapter(mCtx: Context, val notesList: ArrayList<Note>): RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+class CustomAdapter(val listener: (Note) -> Unit): RecyclerView.Adapter<CustomAdapter.NoteViewHolder>() {
 
-    val mCtx = mCtx
+    var notesList: List<Note> = listOf()
 
-
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val noteViewTitle = itemView.noteViewTitle
-        val noteViewText = itemView.noteViewText
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
+        val convertView = inflater.inflate(R.layout.layout_note, parent, false)
+        return NoteViewHolder(convertView)
     }
 
+    override fun getItemCount(): Int = notesList.size
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.layout_note, parent, false)
-        return ViewHolder(v)
+    // Заполнение формы данными из noteList
+    override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
+        holder.bind(notesList[position], listener)
     }
 
-    override fun getItemCount() = notesList.size
+    // Обновление массива элементов <Note> из базы данных
+    fun updateData(data: List<Note>){
+        notesList = data
+        notifyDataSetChanged()
+    }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val note: Note = notesList[position]
-        holder.noteViewTitle?.text = note.title
-        holder.noteViewText?.text = note.noteText
+    inner class NoteViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+        private val noteViewTitle = itemView.noteViewTitle
+        private val noteViewText = itemView.noteViewText
+
+        // Заполнение формы View
+        fun bind(item: Note, listener: (Note) -> Unit) {
+            noteViewTitle.text = item.title
+            noteViewText.text = item.noteText
+
+            itemView.setOnClickListener {
+                listener.invoke(item)
+            }
+        }
     }
 }

@@ -2,42 +2,90 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
 
-    <Button
-        android:id="@+id/safeButton"
+    <FrameLayout
+        android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/safe_button" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/titleNote"
-        android:hint="@string/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="5dp"/>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/color_white"
+            android:textSize="@dimen/font_large_22"
+            app:popupTheme="@style/Theme.AppCompat.Light">
 
-    <TextView
-        android:id="@+id/tvNoteDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:background="#EEEEEE"
-        android:textColor="#212121"
-        android:paddingLeft="10dp"
-        android:paddingBottom="10dp"/>
+        </androidx.appcompat.widget.Toolbar>
 
-    <EditText
-        android:id="@+id/textNote"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="start"
-        android:inputType="textMultiLine"
-        android:paddingLeft="10dp"
-        android:background="@null"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="56dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"/>
+
+                <EditText
+                    android:id="@+id/titleNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="start"
+                    android:inputType="textMultiLine"
+                    android:textSize="@dimen/font_large_24"
+                    android:hint="Title"
+                    android:paddingStart="@dimen/spacing_small_8"
+                    android:paddingEnd="@dimen/spacing_small_8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColorHighlight="#7cff88"
+                    android:background="#EEEEEE"/>
+
+                <TextView
+                    android:id="@+id/tvNoteDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:background="#EEEEEE"
+                    android:textColor="#212121"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/textNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="start"
+                    android:inputType="textMultiLine"
+                    android:textSize="@dimen/font_large_22"
+                    android:hint="Write text here"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColorHighlight="#7cff88"
+                    android:background="@null"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
 </LinearLayout>

@@ -1,7 +1,7 @@
 package com.kirpoltoradnev.privatenotes.db
 
 class Note {
-    var id: Int = 0
+    var id = 0
     var title: String? = null
     var noteText: String? = null
 
@@ -11,14 +11,10 @@ class Note {
         this.noteText = noteGiven
     }
 
-    constructor(titleGiven: String, noteGiven: String){
-        this.title = titleGiven
-        this.noteText = noteGiven
-    }
-
+    // Обновление полей элемента <Note>
     fun updateNote(titleNew: String?, noteNew: String?){
-        this.id = id
         this.title = titleNew
         this.noteText = noteNew
     }
+
 }
