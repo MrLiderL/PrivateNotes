@@ -32,6 +32,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"/>
 
                 <EditText
                     android:id="@+id/titleNote"
@@ -42,21 +47,25 @@
                     android:inputType="textMultiLine"
                     android:textSize="@dimen/font_large_24"
                     android:hint="Title"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
+                    android:paddingStart="@dimen/spacing_small_8"
+                    android:paddingEnd="@dimen/spacing_small_8"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     android:textColorHighlight="#7cff88"
-                    android:background="@null"/>
+                    android:background="#EEEEEE"/>
 
-                <ImageView
+                <TextView
+                    android:id="@+id/tvNoteDate"
                     android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:src="@drawable/dotted_line"
-                    android:layout_marginStart="@dimen/spacing_small_8"
-                    android:layout_marginEnd="@dimen/spacing_small_8"/>
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:background="#EEEEEE"
+                    android:textColor="#212121"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    />
 
                 <EditText
                     android:id="@+id/textNote"
